@@ -1,8 +1,8 @@
-version = '1.0'
+version = '1.1'
 defaultTasks 'clean','build'
 apply plugin: 'java'
 sourceCompatibility = 1.5
-rundeckPluginVersion= '1.0'
+rundeckPluginVersion= '1.1'
 
 repositories {
     mavenCentral()
@@ -18,7 +18,7 @@ configurations{
     }
 }
 dependencies {
-    compile fileTree(dir: 'build-dependencies', include: '*.jar')
+    compile group:'org.rundeck',name:'rundeck-core',version:'2.3.0'
     testCompile(
         //[group: 'junit', name: 'junit', version: '3.8.1',ext:'jar']
     )
